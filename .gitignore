@@ -11,3 +11,6 @@ results/
 *.bin
 *.pt
 *.tar
+cluster.local.json
+config.local.json.tmp
+install.local.lock

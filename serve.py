@@ -1,6 +1,7 @@
-"""Plan and operate one rank of the ThinkingCap ThinkingCap server on the local host."""
+"""Plan and operate one rank of the ThinkingCap server on the local host."""
 from __future__ import annotations
 import argparse
+import hashlib
 import ipaddress
 import json
 from pathlib import Path
@@ -16,7 +17,10 @@ OWNER = 'x00byte.thinkingcap-qwen38'
 
 
 def load(path):
-    cfg = json.loads(Path(path).read_text())
+    return validate(json.loads(Path(path).read_text()))
+
+
+def validate(cfg):
     if cfg['profile'] != 'thinkingcap':
         raise ValueError('This runtime requires the thinkingcap profile')
     for key in ('model_dir', 'draft_dir', 'cache_dir'):
@@ -41,6 +45,17 @@ def load(path):
     return cfg
 
 
+def overlay_fingerprint():
+    expected = json.loads((ROOT / 'runtime/overlay-lock.json').read_text())
+    return hashlib.sha256(json.dumps(expected, sort_keys=True).encode()).hexdigest()
+
+
+def config_fingerprint(cfg, rank):
+    payload = {'config': cfg, 'rank': rank, 'overlay': overlay_fingerprint(),
+               'profile': json.loads((ROOT / 'profiles/thinkingcap.json').read_text())}
+    return hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
+
+
 def command(cfg, rank):
     if rank not in (0, 1):
         raise ValueError('Rank must be 0 or 1')
@@ -54,6 +69,7 @@ def command(cfg, rank):
                FLASHINFER_WORKSPACE_BASE='/cache/flashinfer-workspace')
     args = ['docker', 'run', '-d', '--name', cfg['container_name'],
             '--label', 'org.thinkingcap.owner=' + OWNER,
+            '--label', 'org.thinkingcap.config=' + config_fingerprint(cfg, rank),
             '--gpus', 'all', '--network', 'host', '--ipc', 'host',
             '--device', '/dev/infiniband', '--cap-add', 'IPC_LOCK',
             '--security-opt', 'seccomp=unconfined', '--ulimit', 'memlock=-1:-1',
@@ -100,9 +116,7 @@ def start(cfg, rank):
         raise RuntimeError('GPU is occupied; drain and stop the current service first')
     image = json.loads(run(['docker', 'image', 'inspect', cfg['image']]))[0]
     labels = image.get('Config', {}).get('Labels') or {}
-    expected = json.loads((ROOT / 'runtime/overlay-lock.json').read_text())
-    import hashlib
-    fingerprint = hashlib.sha256(json.dumps(expected, sort_keys=True).encode()).hexdigest()
+    fingerprint = overlay_fingerprint()
     if image['Architecture'] != 'arm64' or labels.get('org.thinkingcap.overlay') != fingerprint:
         raise RuntimeError('Build the published ThinkingCap runtime before starting')
     for model, key in zip(json.loads((ROOT / 'models.lock.json').read_text()), ('model_dir', 'draft_dir')):

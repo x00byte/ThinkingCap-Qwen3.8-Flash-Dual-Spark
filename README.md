@@ -74,20 +74,25 @@ Both Sparks serve one model using tensor parallelism over RoCE.
 
 Sixteen sequences share the available cache; this is not capacity for sixteen simultaneous full-length contexts. The checkpoint files are unchanged. Quantization hooks act at load time.
 
-## Try it
+## Install and run
 
-You need two ARM64 NVIDIA GB10 hosts with GPU-enabled Docker, a working RoCE fabric, Python 3.10+, and the Hugging Face `hf` CLI. Plan for at least 200 GB of free disk on each host for the approximately 132 GB target, 1.2 GB draft, container layers, and caches.
-
-Clone this repository on both hosts, then follow [the setup guide](docs/setup.md). It covers pinned model downloads, building the runtime, network settings, and starting each rank. The runtime is built from a pinned public myllmbox image plus the included source overlay; it does not require my local Docker images.
+From the head Spark:
 
 ```bash
-cp config.example.json config.local.json
-# Set the fabric addresses, interface/HCA names, paths and CPU affinity.
-python3 serve.py plan --rank 0
-python3 serve.py plan --rank 1
+git clone https://github.com/x00byte/ThinkingCap-Qwen3.8-Flash-Dual-Spark.git
+cd ThinkingCap-Qwen3.8-Flash-Dual-Spark
+./install.sh --worker user@spark-b
 ```
 
-The settings match my running deployment. The portable image and launcher are checked without loading a GPU model; a fresh GPU deployment of this repository has not been tested.
+Replace `user@spark-b` with the worker’s SSH login or configured SSH alias. Both hosts need ARM64 Linux, Python 3.10+, Docker with NVIDIA GPU support available to your user, a configured RoCE link, and about 200 GB of free disk. SSH to the worker must already work without a password prompt, with its host key trusted.
+
+The script detects the fabric, copies the recipe to the worker, builds the pinned runtime on both hosts, downloads and verifies the target and draft, writes configuration, starts both ranks, and waits for the API. Host Python packages and the Hugging Face CLI do not need a separate installation. Downloads use the Hub library inside the pinned image.
+
+Re-run `./install.sh` to resume preparation or reuse a matching running installation. Use `./install.sh --worker user@spark-b --plan` to preview the workflow, or add `--prepare-only` to download and build before a maintenance window. Existing GPU services must be drained and stopped through their own launcher before starting ThinkingCap.
+
+Defaults store models and caches under `~/.local/share/thinkingcap-qwen38` on each host. [Setup and recovery](docs/setup.md) covers custom paths, network overrides and manual operation.
+
+The installer has automated tests and CPU runtime checks. A complete installation through this script on idle Sparks has not yet been GPU-tested.
 
 No license has been selected for my original work in this repository. Bundled third-party source retains its own licenses; model terms apply to downloaded weights. See [third-party notices](THIRD_PARTY.md).
 
