@@ -1,0 +1,10 @@
+*
+!Dockerfile
+!overlay/
+!overlay/**
+!licenses/
+!licenses/**
+!verify_overlay.py
+!overlay-lock.json
+!source-lock.json
+!mbx_opt_quant.py.patch

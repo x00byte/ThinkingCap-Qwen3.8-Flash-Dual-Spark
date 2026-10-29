@@ -1,0 +1,13 @@
+config.local.json
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.cache/
+results/
+*.log
+*.safetensors
+*.bin
+*.pt
+*.tar

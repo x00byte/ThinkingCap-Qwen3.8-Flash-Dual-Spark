@@ -1,0 +1,9 @@
+Mode: built-in image_gen
+
+Use case: stylized-concept
+Asset type: wide GitHub README cover artwork, landscape 16:9.
+Primary request: ThinkingCap Qwen 3.8 Flash on Dual Sparks, a powerful local AI setup for high concurrency agentic research.
+Scene and subject: two compact NVIDIA DGX Spark style desktop compute units, side by side, realistically proportioned small square silver enclosures with dark mesh faces, connected by a luminous flowing fabric of many fine parallel computation paths. The paths converge into a refined abstract glowing thinking-cap silhouette above the machines, suggesting efficient reasoning and concurrent agents. Sophisticated cinematic 3D product illustration, crisp metal textures, dark studio setting, restrained electric light, visually striking and professional.
+Composition: ample clear negative space above the hardware, balanced wide composition, text readable at GitHub README width.
+Text verbatim: "ThinkingCap" as the main title; "Qwen 3.8 Flash" underneath; "Dual Sparks" as a small subtitle. No other text.
+Constraints: no invented logos, no mascots, no performance charts or numbers, no watermark, no endorsement badges. Exact spelling and restrained clean typography.

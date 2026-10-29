@@ -1,0 +1,23 @@
+{
+  "thinkingcap_dense_quant.py": "54b1c227a175788322d58ba325de3d1b79d3e4637300c5fd4c529b370217b7ba",
+  "thinkingcap_dflash2.py": "8824a34e45dd1c69087a5758263be9dd3595e9d798d8e0edcbd28b6041c9b99e",
+  "thinkingcap_draft_head.py": "69bbcf40957f7f135e54e6feaf8f79ec5c0f543176306f7fc6150a1880b6b71a",
+  "thinkingcap_hyperqwen_lookup.py": "068a1381e76dc27e95d8ed1b629fd8d1aaabe83a170adc25d07a00cf6826ad3d",
+  "thinkingcap_lookup.py": "2c992b9726270439a30abc0df59faf78c9ba0bf78fe3d17932dd55014a2614b4",
+  "vllm/distributed/device_communicators/cuda_communicator.py": "7c606dd657eb69ca17d9cec37fa6a9fd9e09c222700f16dc7e8414eaf5d1ef9a",
+  "vllm/model_executor/kernels/linear/mxfp8/b12x.py": "94679796e8d51f5ae1265a8b93eb29a575c8f067c841d578e66115df5e37e373",
+  "vllm/model_executor/kernels/linear/nvfp4/b12x.py": "43a0bfed39a396400059061450cc05361f131f2e9e91070e51cfa1fbaa43641a",
+  "vllm/model_executor/model_loader/base_loader.py": "c2d967b67fd98b9bb766d34f4099ff0726e557db5ec8fc06c716071b692f3921",
+  "vllm/model_executor/models/config.py": "31b9acc4e938b2a306f3158b9e159a7cf7c814ea8709fe888d1cf3df566777f3",
+  "vllm/model_executor/warmup/b12x_warmup.py": "2d22058549bcfca52f4d75506f5dd20f0c50cdefee5eb7a054e5fc4d873322fd",
+  "vllm/models/qwen4_exp/common/ngram_embedding.py": "ca63456c881634a6754e8acd6eaf83fc56bef788d3cc7c6a6e8d8eeaaf30da16",
+  "vllm/models/qwen4_exp/nvidia/low_latency_gemm.py": "ae09ba3911ac746786a67cd35ff972ad6c4adeca74a5161e5b70916d45117d5e",
+  "vllm/models/qwen4_exp/nvidia/model.py": "2517932b924a40f5861a771579d348b4624a09a03547fe161e7c541d2aa9767e",
+  "vllm/models/qwen4_exp/nvidia/qsa.py": "0d40c241bef0cf04dcc33260deb231162725fe41afe6cb3fcde71dab7b66afcd",
+  "vllm/models/qwen4_exp/nvidia/qsa_quantization.py": "bb64018be2b8bace9c2d1cb1d61a0f2f5256a6f279cc15897a73f080c5db46b6",
+  "vllm/v1/core/kv_cache_utils.py": "90c3b3b27e7413df35270e1357bc9c344cfd6dfda1110d1b66d8911c693a5324",
+  "vllm/v1/core/sched/scheduler.py": "a12742279a27977d913bcd41619c1fd79286bd005af8c783bb275e259357b9e9",
+  "vllm/v1/worker/gpu/spec_decode/__init__.py": "3a142f318d7d352b532ff677a7bc40eaef2601dea7913a852a7c33dc4752960b",
+  "vllm/v1/worker/gpu/spec_decode/dflash2/speculator.py": "8a26890d7c1a323788e87d55df7becdd19cba6fc35d5c2025eb2ecf601d3cf55",
+  "vllm/v1/worker/gpu/spec_decode/mtp/speculator.py": "d81363ef8a62c3743ba73e4e7179e96ccf01c9b6afd889051558f9da5bfeb8bb"
+}

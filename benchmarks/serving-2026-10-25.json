@@ -1,0 +1,80 @@
+{
+  "measurement_date": "2026-10-25",
+  "hardware": "Two NVIDIA GB10 Spark systems, tensor parallel size 2",
+  "source_report": "benchmark-20261025T020048Z-dflash-release-prefill8192.json",
+  "source_report_sha256": "7de3f32114ed3dfdc29a0cc05a9ca8345f91393507e3879d5488ddd40dfd35a0",
+  "core_report_sha256": "8a5a51886757e712b8a38797fe1c3c1ef0c7d5d1ec9a9f2b318f0b934d511a25",
+  "sampling": {
+    "temperature": 0,
+    "enable_thinking": false
+  },
+  "prose": {
+    "output_tokens_per_request": 400,
+    "min_tokens": 400,
+    "ignore_eos": true,
+    "batches_per_concurrency": 1,
+    "prompt": "Independent case {i}. Write a long, detailed story about an engineer repairing an observatory during a winter storm. Include dialogue, changing weather, technical repairs and a gradual discovery. Continue with several chapters and do not summarize.",
+    "aggregate_decode_definition": "Total completion tokens / (last response end - earliest first streamed token in the batch)",
+    "end_to_end_definition": "Total completion tokens / batch wall time",
+    "measurements": [
+      {
+        "concurrency": 1,
+        "completion_tokens": 400,
+        "elapsed_s": 6.619331947993487,
+        "wall_tps": 60.42905887523161,
+        "stream_decode_tps": 61.28456924088632,
+        "ttft_median_s": 0.09190401993691921,
+        "running_before": 0.0,
+        "waiting_before": 0.0,
+        "external_completions": 0.0
+      },
+      {
+        "concurrency": 4,
+        "completion_tokens": 1600,
+        "elapsed_s": 10.255597152048722,
+        "wall_tps": 156.01236829786885,
+        "stream_decode_tps": 157.44537921038412,
+        "ttft_median_s": 0.22082119598053396,
+        "running_before": 0.0,
+        "waiting_before": 0.0,
+        "external_completions": 0.0
+      },
+      {
+        "concurrency": 16,
+        "completion_tokens": 6400,
+        "elapsed_s": 18.060757035040297,
+        "wall_tps": 354.35945390235526,
+        "stream_decode_tps": 356.3482039696075,
+        "ttft_median_s": 0.41554190998431295,
+        "running_before": 0.0,
+        "waiting_before": 0.0,
+        "external_completions": 0.0
+      }
+    ]
+  },
+  "prefill": {
+    "requests_per_prompt": 2,
+    "max_output_tokens": 1,
+    "random_seed": 73,
+    "prompt_description": "Unique marker plus a fixed-seed sequence of random words; the identical prompt is repeated warm.",
+    "rate_definition": "Cold prompt tokens / cold time to first token",
+    "measurements": [
+      {
+        "prompt_tokens": 10282,
+        "cold_ttft_s": 3.3889832319691777,
+        "warm_ttft_s": 0.10385551501531154,
+        "cold_prompt_tokens_per_ttft_s": 3033.9483249746318,
+        "cold_cached_tokens": 0,
+        "warm_cached_tokens": 10224
+      },
+      {
+        "prompt_tokens": 41044,
+        "cold_ttft_s": 12.82132571702823,
+        "warm_ttft_s": 0.15667622303590178,
+        "cold_prompt_tokens_per_ttft_s": 3201.229023102403,
+        "cold_cached_tokens": 0,
+        "warm_cached_tokens": 40992
+      }
+    ]
+  }
+}

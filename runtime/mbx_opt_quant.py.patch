@@ -1,0 +1,13 @@
+--- a/mbx_opt_quant.py
++++ b/mbx_opt_quant.py
+@@ -296,6 +296,10 @@
+     """Patch 43 (base_loader, after process_weights_after_loading): the target only — drafters go through draft_loaded."""
+     if "MTP" in type(model).__name__ or model_config is not vllm_config.model_config:
+         return
++    if os.environ.get("THINKINGCAP_TARGET_DENSE_FP8", "0") == "1":
++        from thinkingcap_dense_quant import install as _tc_dense
++        _tc_dense(model, (".linear_attn.in_proj_qkv", ".linear_attn.in_proj_z", ".linear_attn.out_proj",
++                          ".self_attn.qkv_proj", ".self_attn.o_proj", ".mlp.shared_expert."))
+     inc = _split(os.environ.get("MBX_INT8_INCLUDE")) or None
+     exc = _EXCLUDE + tuple(_split(os.environ.get("MBX_INT8_EXCLUDE")))
+     calib = os.environ.get("MBX_INT8_CALIB_DIR")

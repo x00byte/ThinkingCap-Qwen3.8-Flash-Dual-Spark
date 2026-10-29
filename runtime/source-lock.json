@@ -1,0 +1,33 @@
+{
+  "base_image": "myllmbox/qwen38-flash-next-cluster-vllm@sha256:a87154e4edca649013b7b8934df70ac53e9f096f5d0e42a823f0ee36452ca315",
+  "source_image": "sha256:9079a6e080cbb1eb2c85435898fc92b53e7034181f715011d58aac0056910c98",
+  "snapshot_date": "2026-10-29",
+  "scope": "16 changed vLLM source files and five local support modules exported from the running deployment. The pinned base already contains identical B12X source and mbx_ple_ckpt.py. All 13 vLLM binary hashes matched the base.",
+  "files": 21,
+  "overlay_fingerprint": "e33f58a4c50bbcd16b7a8b4b115bdac3f7055b62f65bebcd54b7b6c4d4601a41",
+  "mbx_opt_quant_base_sha256": "0dbcf3611feb85fe562e3515607b664fd2ad526f0e0919e19cbbc8cb8ea83ccc",
+  "mbx_opt_quant_installed_sha256": "bcaf0482cad5ba4d30caf5bda35aefeeef60a40e0ddf7beb9e67f5ed6c88eb3b",
+  "exported_source_sha256": {
+    "thinkingcap_dense_quant.py": "54b1c227a175788322d58ba325de3d1b79d3e4637300c5fd4c529b370217b7ba",
+    "thinkingcap_dflash2.py": "8824a34e45dd1c69087a5758263be9dd3595e9d798d8e0edcbd28b6041c9b99e",
+    "thinkingcap_draft_head.py": "69bbcf40957f7f135e54e6feaf8f79ec5c0f543176306f7fc6150a1880b6b71a",
+    "thinkingcap_hyperqwen_lookup.py": "b35d3e33c2744f043e74c5f26ba4506278f74f7f5abc9e6e58c081b0e1117a1e",
+    "thinkingcap_lookup.py": "2c992b9726270439a30abc0df59faf78c9ba0bf78fe3d17932dd55014a2614b4",
+    "vllm/distributed/device_communicators/cuda_communicator.py": "c22f0efb1c5c009319588096db2dbaf87fb2aa927b4df11d95ad83a7cc0dfc23",
+    "vllm/model_executor/kernels/linear/mxfp8/b12x.py": "7abc42bccf03114e880871fa2ffd67d11466483b2ea636d466e762c17417f3d9",
+    "vllm/model_executor/kernels/linear/nvfp4/b12x.py": "7875c8dbe73f864c42a63b39e9efc2b65c9e17cef56844e57940d0f8aa8b0809",
+    "vllm/model_executor/model_loader/base_loader.py": "03d79152b5b336a031474d4fd6d937923abd5a199b1c0dc7bc4520c0b1f11cc5",
+    "vllm/model_executor/models/config.py": "9c9679fdcf2d04b506bb8584de675ebdd365d5832cf1ee221d22420faf718f45",
+    "vllm/model_executor/warmup/b12x_warmup.py": "2d44aabb9ef5858872b6be99ae38d0d813f9eb22e5bca433b1e2823a27fd4de1",
+    "vllm/models/qwen4_exp/common/ngram_embedding.py": "46d3095b76b93f8820cbf7a6b3ef1ba5debd7f09d3dc0234ee5756ee761d86d4",
+    "vllm/models/qwen4_exp/nvidia/low_latency_gemm.py": "807c8f3be9de9aec8a360bdeae3e51afe4e6a78ca8e8e8b3d216df1fb09be064",
+    "vllm/models/qwen4_exp/nvidia/model.py": "2a79a95eae78325b108b2f33f9badadd4247c6078027b6d56f0227be7c074048",
+    "vllm/models/qwen4_exp/nvidia/qsa.py": "7e85f13fa7219eda0fb8df6f36c4bc4b0fe8b150e8c50724d32b89d31da851d2",
+    "vllm/models/qwen4_exp/nvidia/qsa_quantization.py": "5b874554407a6780d26f574fae27fd9020879beddcd16f5de127ad02324c6e77",
+    "vllm/v1/core/kv_cache_utils.py": "87ad3c8a272a758ec77a2165efcded65602167960afe944f4a11c382c6b2ff4d",
+    "vllm/v1/core/sched/scheduler.py": "8dce8eb8e5711a87f0b36cb3aa9689453aec7fee235a90ca2bff88e6425f5773",
+    "vllm/v1/worker/gpu/spec_decode/__init__.py": "f02686c2932ec72c265d4cdb333d3cf79f897e0131e1022bb550544f46f894f5",
+    "vllm/v1/worker/gpu/spec_decode/dflash2/speculator.py": "79d15765252ac672bc884cb2a8e5e2d779ba62dd1a8cefd6a9bd80a777758164",
+    "vllm/v1/worker/gpu/spec_decode/mtp/speculator.py": "75cac677725e999d5720c8b9c73ed9c574efccbc86cbb5cbfaebe3445c689205"
+  }
+}

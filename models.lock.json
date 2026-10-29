@@ -1,0 +1,176 @@
+[
+  {
+    "repo": "bottlecapai/ThinkingCap-Qwen3.8-Flash-Next-NVFP4",
+    "revision": "df3922b21fc28a8604cc9b31451495690d155194",
+    "files": [
+      {
+        "path": "LICENSE",
+        "bytes": 3235,
+        "sha256": null,
+        "git_blob": "9557a8961782792814714b7488346732c043793d"
+      },
+      {
+        "path": "chat_template.jinja",
+        "bytes": 8952,
+        "sha256": null,
+        "git_blob": "c0c686f9c38d70d179fb7b5f5aa7530bc913dda3"
+      },
+      {
+        "path": "config.json",
+        "bytes": 5056,
+        "sha256": null,
+        "git_blob": "42eff736ed1b64360ba1635dd525d01c18d303dc"
+      },
+      {
+        "path": "generation_config.json",
+        "bytes": 202,
+        "sha256": null,
+        "git_blob": "023756cfadf88e5bf69eefeee3e172f38c448d64"
+      },
+      {
+        "path": "merges.txt",
+        "bytes": 3353259,
+        "sha256": null,
+        "git_blob": "a494e019ca1502219fd0128658b979e5f05ae8e8"
+      },
+      {
+        "path": "model-00001-of-00014.safetensors",
+        "bytes": 9705609234,
+        "sha256": "f1a5419abfab936dc902ed0960cf497a99f660f6d40ab297635cbe6abeac1d2f",
+        "git_blob": null
+      },
+      {
+        "path": "model-00002-of-00014.safetensors",
+        "bytes": 9600050024,
+        "sha256": "d8688655d95e690f24d8bf213058ad2321a85112b8f8e3a18014d441db278f4a",
+        "git_blob": null
+      },
+      {
+        "path": "model-00003-of-00014.safetensors",
+        "bytes": 9600050024,
+        "sha256": "2d5062667db03bafee96d06e9159487fb22c9c8b702c305b3f352bbf73fe5602",
+        "git_blob": null
+      },
+      {
+        "path": "model-00004-of-00014.safetensors",
+        "bytes": 9600050024,
+        "sha256": "7b21a7120ad23643935988e996026e78a3f796decee7555752982f665073b558",
+        "git_blob": null
+      },
+      {
+        "path": "model-00005-of-00014.safetensors",
+        "bytes": 9600050032,
+        "sha256": "ac833c77e6237305f75f181bb88507dc826258cee50a978b5c7c40661beca4b1",
+        "git_blob": null
+      },
+      {
+        "path": "model-00006-of-00014.safetensors",
+        "bytes": 10000742740,
+        "sha256": "440c1b662365c83b95565925aadbdb8dd356c1ec5f0bbfab05cbfa967a0294d3",
+        "git_blob": null
+      },
+      {
+        "path": "model-00007-of-00014.safetensors",
+        "bytes": 10004042428,
+        "sha256": "cc3869474037098f1cbe7dbb7abbbc41818533ee90e11705eb7377a4a0e0b948",
+        "git_blob": null
+      },
+      {
+        "path": "model-00008-of-00014.safetensors",
+        "bytes": 10003514464,
+        "sha256": "c210bba9e643cdfc59ea052326f87d9dff4cf1a885039864109322e99d7cc5c7",
+        "git_blob": null
+      },
+      {
+        "path": "model-00009-of-00014.safetensors",
+        "bytes": 10002384800,
+        "sha256": "d1e1616cf4979d7eea1e121ffdc518ef958a765600484cfb6108c7a5941b9cba",
+        "git_blob": null
+      },
+      {
+        "path": "model-00010-of-00014.safetensors",
+        "bytes": 10004131824,
+        "sha256": "e89dcbe16b97612efa3b6018a90a144e4e5ee288f670a2878a3a0cad35877c80",
+        "git_blob": null
+      },
+      {
+        "path": "model-00011-of-00014.safetensors",
+        "bytes": 10004204800,
+        "sha256": "8f13b95ed2d939482e9643dcabb8e44ac7daeda13e548f7505b4adc042320d83",
+        "git_blob": null
+      },
+      {
+        "path": "model-00012-of-00014.safetensors",
+        "bytes": 10003128096,
+        "sha256": "2a8b286bf6473da2179e522b80134ca5fb796c1dfbc155254adc65d1599c0b0c",
+        "git_blob": null
+      },
+      {
+        "path": "model-00013-of-00014.safetensors",
+        "bytes": 10003688896,
+        "sha256": "818c1dea3463b63c0618d5e00aa91b9886df2aaa619694da4a83a5383b0dad16",
+        "git_blob": null
+      },
+      {
+        "path": "model-00014-of-00014.safetensors",
+        "bytes": 3438859048,
+        "sha256": "19008c08d840d9fe28a117939ebafe9efd681224abfacfb12c8d1f8f3c541c66",
+        "git_blob": null
+      },
+      {
+        "path": "model.safetensors.index.json",
+        "bytes": 25949856,
+        "sha256": "209dac7a51632f8b285c762469e793842b9f8ea0135d9f16d27d222fd3d5dd06",
+        "git_blob": null
+      },
+      {
+        "path": "preprocessor_config.json",
+        "bytes": 390,
+        "sha256": null,
+        "git_blob": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64"
+      },
+      {
+        "path": "tokenizer.json",
+        "bytes": 12809320,
+        "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+        "git_blob": null
+      },
+      {
+        "path": "tokenizer_config.json",
+        "bytes": 17928,
+        "sha256": null,
+        "git_blob": "5de744b3fca2129d7186979ae47c06be33903243"
+      },
+      {
+        "path": "video_preprocessor_config.json",
+        "bytes": 385,
+        "sha256": null,
+        "git_blob": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe"
+      },
+      {
+        "path": "vocab.json",
+        "bytes": 6722759,
+        "sha256": null,
+        "git_blob": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176"
+      }
+    ]
+  },
+  {
+    "repo": "incoai/Qwen3.8-Flash-Next-DFlash2",
+    "revision": "a22a1744e85c17364dcc54a6a420af7135d4c7f6",
+    "files": [
+      {
+        "path": "config.json",
+        "bytes": 1236,
+        "sha256": null,
+        "git_blob": "b370fddafd42756538af6e1cbe8273cab6e6d803"
+      },
+      {
+        "path": "model.safetensors",
+        "bytes": 1206140008,
+        "sha256": "d6723f2a359eaf33ec0c95f22ae8edda896774020c552296a85e1913b4d3186f",
+        "git_blob": null
+      }
+    ]
+  }
+]
